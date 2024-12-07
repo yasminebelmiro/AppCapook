@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">AppCapook</string>
     <string name="t_tulo_autor_editora">Título, autor, editora...</string>
+    <string name="recycler_view_books_description">Lista de livros</string>
 </resources>

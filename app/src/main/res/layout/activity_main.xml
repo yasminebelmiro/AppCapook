@@ -14,14 +14,17 @@
         android:layout_width="match_parent"
         android:layout_height="65dp"
         android:inputType=""
+        android:maxLines="1"
+        android:singleLine="true"
+        android:imeOptions="actionSearch"
         android:hint="@string/t_tulo_autor_editora"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+         />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycleViewBooks"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:listitem="@layout/item_layout"
-        />
+        android:contentDescription="@string/recycler_view_books_description" />
+
 </LinearLayout>

@@ -5,8 +5,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.appcapook.model.Volume
+import com.squareup.picasso.Picasso
 
-class BookAdapter(private val books: List<Book>) :
+class BookAdapter( val items: List<Volume>) :
     RecyclerView.Adapter<BookAdapter.BookViewHolder>() {
 
     inner class BookViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -18,13 +20,15 @@ class BookAdapter(private val books: List<Book>) :
             .inflate(R.layout.item_layout, parent, false)
         return BookViewHolder(view)
     }
+    override fun getItemCount(): Int = items.size
 
     override fun onBindViewHolder(holder: BookViewHolder, position: Int) {
-        val book = books[position]
-        holder.imageView.setImageResource(book.img)
+        val volume = items[position]
+        if (volume.volumeInfo.imageLinks?.smallThumbnail != null) {
+            Picasso.get().load(volume.volumeInfo.imageLinks.smallThumbnail).into(holder.imageView)
+        } else{
+            holder.imageView.setImageResource(R.drawable.baseline_image_24)
+            }
+        }
     }
 
-    override fun getItemCount(): Int {
-        return books.size
-    }
-}

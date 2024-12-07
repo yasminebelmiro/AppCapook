@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "com.example.appcapook"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.appcapook"
-        minSdk = 24
-        targetSdk = 34
+        minSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -36,8 +36,16 @@ android {
 }
 
 dependencies {
-
-
+    implementation (libs.picasso.v271828)
+    implementation (libs.glide)
+    annotationProcessor (libs.compiler)
+    testImplementation (libs.jetbrains.kotlinx.coroutines.test)
+    implementation(libs.kotlinx.coroutines.core)
+    implementation(libs.kotlinx.coroutines.android)
+    implementation (libs.gson)
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+    implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
