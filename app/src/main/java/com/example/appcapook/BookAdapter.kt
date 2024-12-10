@@ -1,5 +1,6 @@
 package com.example.appcapook
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -26,9 +27,27 @@ class BookAdapter( val items: List<Volume>) :
         val volume = items[position]
         if (volume.volumeInfo.imageLinks?.smallThumbnail != null) {
             Picasso.get().load(volume.volumeInfo.imageLinks.smallThumbnail).into(holder.imageView)
-        } else{
+        } else {
             holder.imageView.setImageResource(R.drawable.baseline_image_24)
-            }
         }
+
+        holder.itemView.setOnClickListener {
+            val context = holder.itemView.context
+            val intent = Intent(context, BookDatailsActivity::class.java)
+
+
+            intent.putExtra("titulo", volume.volumeInfo.title)
+            intent.putExtra(
+                "autor",
+                volume.volumeInfo.authors?.joinToString(", ") ?: "Autor desconhecido"
+            )
+            intent.putExtra("sinopse", volume.volumeInfo.description ?: "Sem descrição disponível")
+            intent.putExtra("imageUrl", volume.volumeInfo.imageLinks?.smallThumbnail)
+            intent.putExtra("status", "Não lido") //Aqui vamos integrar com o banco de dados e a estante
+
+            context.startActivity(intent)
+        }
+
+    }
     }
 
