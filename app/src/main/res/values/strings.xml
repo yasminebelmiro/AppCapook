@@ -2,4 +2,13 @@
     <string name="app_name">AppCapook</string>
     <string name="t_tulo_autor_editora">Título, autor, editora...</string>
     <string name="recycler_view_books_description">Lista de livros</string>
+    <string name="capa_do_livro">Capa do livro</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="lorem_ipsum_dolor_sit_amet_consectetur_adipiscing">“Lorem ipsum dolor sit amet, consectetur adipiscing.”</string>
+    <string name="autor">Autor</string>
+    <string name="suas_leituras_atuais">Suas leituras atuais:</string>
+    <string name="title_activity_main2">MainActivity2</string>
 </resources>

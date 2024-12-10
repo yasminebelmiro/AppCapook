@@ -5,7 +5,10 @@ import android.view.inputmethod.EditorInfo
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.appcapook.model.BookHttp
 import kotlinx.coroutines.CoroutineScope
@@ -18,44 +21,19 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        // Referência para o EditText de busca
-        val inputBuscarLivro: EditText = findViewById(R.id.InputBuscarLivro)
-
-        // Referência para o RecyclerView
-        val recyclerView = findViewById<RecyclerView>(R.id.recycleViewBooks)
-        recyclerView.layoutManager = GridLayoutManager(this, 3)
-
-        // Configuração para buscar livros quando o usuário pressionar Enter (ação de pesquisa)
-        inputBuscarLivro.setOnEditorActionListener { _, actionId, _ ->
-            if (actionId == EditorInfo.IME_ACTION_SEARCH) {
-                val query = inputBuscarLivro.text.toString()
-
-                if (query.isNotEmpty()) {
-                    // Iniciar a busca pelos livros
-                    buscarLivros(query, recyclerView)
-                } else {
-                    Toast.makeText(this, "Por favor, insira um título, autor ou editora", Toast.LENGTH_SHORT).show()
-                }
-                true  // Marca a ação como tratada
-            } else {
-                false  // Para outros tipos de ações, não fazemos nada
-            }
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
         }
-    }
 
-    private fun buscarLivros(query: String, recyclerView: RecyclerView) {
-        CoroutineScope(Dispatchers.IO).launch {
-            val books = BookHttp.searchBook(query)?.items ?: emptyList()
-            withContext(Dispatchers.Main) {
-                if (books.isNotEmpty()) {
-                    // Atualizar o RecyclerView com os livros encontrados
-                    val adapter = BookAdapter(books)
-                    recyclerView.adapter = adapter
-                } else {
-                    Toast.makeText(this@MainActivity, "Nenhum livro encontrado", Toast.LENGTH_SHORT).show()
-                }
-            }
-        }
+        val books = Book.getBooks()
+        val recycleViewReading = findViewById<RecyclerView>(R.id.recycleReading)
+        val recyclerViewMetas = findViewById<RecyclerView>(R.id.recycleMetas)
+        recycleViewReading.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        recycleViewReading.adapter = BookReadingAdapter(books)
+        recyclerViewMetas.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        recyclerViewMetas.adapter = BookReadingAdapter(books)
+
     }
 }

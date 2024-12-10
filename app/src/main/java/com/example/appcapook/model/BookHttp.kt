@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit
 
 object BookHttp {
     private const val API_KEY = "AIzaSyA1-IqjfkIztE_AZp2NAdqHv0xbjrN5UH8"
-    private const val BASE_URL = "https://www.googleapis.com/books/v1/volumes?q=%s&key=$API_KEY"
+    private const val BASE_URL = "https://www.googleapis.com/books/v1/volumes?q=%s&key=$API_KEY&maxResults=40"
     private val gson = Gson()
 
     private val client = OkHttpClient.Builder()
