@@ -30,10 +30,15 @@ class MainActivity : AppCompatActivity() {
         val books = Book.getBooks()
         val recycleViewReading = findViewById<RecyclerView>(R.id.recycleReading)
         val recyclerViewMetas = findViewById<RecyclerView>(R.id.recycleMetas)
+
         recycleViewReading.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         recycleViewReading.adapter = BookReadingAdapter(books)
+
         recyclerViewMetas.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-        recyclerViewMetas.adapter = BookReadingAdapter(books)
+        recyclerViewMetas.adapter = MetasAdapter(books)
+
+
+
 
     }
 }
