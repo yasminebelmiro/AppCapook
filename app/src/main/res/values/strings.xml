@@ -30,4 +30,5 @@
     <string name="_0_livros">0 livros</string>
     <string name="mais">+</string>
     <string name="_50">50%</string>
+    <string name="logoff">Logoff</string>
 </resources>
