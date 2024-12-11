@@ -26,7 +26,7 @@
             android:layout_height="match_parent"
             android:layout_marginStart="130sp"
             android:layout_marginTop="30sp"
-            app:srcCompat="@drawable/baseline_image_24" />
+            app:srcCompat="@drawable/mais" />
 
     </LinearLayout>
 </LinearLayout>

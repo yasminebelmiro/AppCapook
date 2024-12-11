@@ -12,7 +12,9 @@
         android:id="@+id/imageView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/baseline_image_24" />
+        app:srcCompat="@drawable/baseline_image_24"
+        android:paddingBottom="20sp"
+        android:paddingTop="20sp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
