@@ -24,4 +24,10 @@
     <string name="menu_bottom_bar_bookshelves">Estantes</string>
     <string name="menu_bottom_bar_profile">Perfil</string>
     <string name="search">Search</string>
+    <string name="nova_estante">Nova estante</string>
+    <string name="quero_ler">Quero ler</string>
+    <string name="minhas_estantes">Minhas estantes</string>
+    <string name="_0_livros">0 livros</string>
+    <string name="mais">+</string>
+    <string name="_50">50%</string>
 </resources>

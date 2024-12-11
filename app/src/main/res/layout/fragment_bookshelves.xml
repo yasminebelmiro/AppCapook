@@ -3,12 +3,305 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/menu_search"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.fragments.BookshelvesFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
+
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Bookshelves" />
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="50dp"
+                android:gravity="center"
+                android:text="@string/minhas_estantes"
+                android:textColor="#FF5252"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                tools:ignore="TextSizeCheck" />
+
+            <Button
+                android:id="@+id/addEstanteBtn"
+                android:layout_width="170dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="20dp"
+                android:padding="16dp"
+                android:text="@string/nova_estante"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                app:backgroundTint="#d9f8c4"
+                app:cornerRadius="70dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginBottom="60dp"
+                android:layout_marginTop="40dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:background="@drawable/metas_style"
+                    android:paddingHorizontal="20dp" >
+
+                    <TextView
+                        android:id="@+id/textQueroLer"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/quero_ler"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/qtdLivrosQueroLer"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/_0_livros"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/addQueroLer"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:padding="0dp"
+                        android:text="@string/mais"
+
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        app:backgroundTint="#d9f8c4"
+                        app:cornerRadius="70dp" />
+
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycleQueroLer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginVertical="20dp"
+                    />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+
+                    android:gravity="center"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/metas_style"
+                    android:paddingHorizontal="20dp">
+
+                    <TextView
+                        android:id="@+id/textLendo"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Lendo"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/qtdLivrosLendo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/_0_livros"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/addLendo"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:padding="0dp"
+                        android:text="@string/mais"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        app:backgroundTint="#d9f8c4"
+                        app:cornerRadius="70dp"
+                        />
+
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycleLendo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginVertical="20dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+
+                    android:gravity="center"
+                    android:background="@drawable/metas_style"
+                    android:backgroundTint="#F37878"
+                    android:paddingHorizontal="20dp"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textFavoritos"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Favoritos"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/qtdLivrosFavoritos"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/_0_livros"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/addFavoritos"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:padding="0dp"
+                        android:text="@string/mais"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        app:backgroundTint="#d9f8c4"
+                        app:cornerRadius="70dp"
+                        android:onClick="onClickAddBook"/>
+
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycleFavoritos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginVertical="20dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/metas_style"
+                    android:paddingHorizontal="20dp"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textLidos"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Lidos"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/qtdLivrosLidos"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/_0_livros"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/addLidos"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:padding="0dp"
+                        android:text="@string/mais"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        app:backgroundTint="#d9f8c4"
+                        app:cornerRadius="70dp"
+                        android:onClick="onClickAddBook"/>
+
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycleLidos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginVertical="20dp"
+                    />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+
+                    android:gravity="center"
+                    android:background="@drawable/metas_style"
+                    android:backgroundTint="#C5F9F3"
+                    android:paddingHorizontal="20dp"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textAbandonados"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Abandonados"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/qtdLivrosAbandonados"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/_0_livros"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/addAbandonados"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:padding="0dp"
+                        android:text="@string/mais"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        app:backgroundTint="#d9f8c4"
+                        app:cornerRadius="70dp"
+                        android:onClick="onClickAddBook"/>
+
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycleAbandonados"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginVertical="20dp"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+
 
 </FrameLayout>

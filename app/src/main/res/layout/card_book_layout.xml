@@ -3,30 +3,33 @@
     android:layout_width="match_parent"
     android:layout_height="150dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#F9F9C5"
+    android:background="@drawable/metas_style"
     android:orientation="horizontal"
-    android:gravity="center"
-    android:layout_margin="30dp">
+      android:layout_margin="30dp">
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="87dp"
+        android:layout_height="121dp"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="10dp"
         app:srcCompat="@drawable/baseline_image_24"
-        android:paddingBottom="20sp"
-        android:paddingTop="20sp"/>
+
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center">
+        android:gravity="center"
+        android:layout_margin="15dp">
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Iniciado em:" />
+            android:text="Titulo"
+            android:textSize="25dp"/>
 
         <TextView
             android:id="@+id/textView3"

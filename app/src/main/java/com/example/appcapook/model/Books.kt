@@ -10,9 +10,6 @@ data class Book(
 ) {
     companion object {
 
-
-
-
         fun getBooks(): List<Book> {
             return listOf(
                 Book(R.drawable.imagem1, "Título 1", "Autor 1", 300, 50),
