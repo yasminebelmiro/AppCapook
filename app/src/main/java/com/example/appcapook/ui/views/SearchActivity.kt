@@ -1,4 +1,4 @@
-package com.example.appcapook
+package com.example.appcapook.ui.views
 
 import android.os.Bundle
 import android.view.inputmethod.EditorInfo
@@ -10,7 +10,9 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.appcapook.model.BookHttp
+import com.example.appcapook.R
+import com.example.appcapook.ui.adapters.BookAdapter
+import com.example.appcapook.data.BookHttp
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

@@ -16,17 +16,17 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.views.MainActivity"
             android:exported="true" />
         <activity
-            android:name=".BookDatailsActivity"
+            android:name=".ui.views.BookDatailsActivity"
             android:exported="true" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".ui.views.LoginActivity"
             android:exported="true">
         </activity>
         <activity
-            android:name=".SearchActivity"
+            android:name=".ui.views.SearchActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

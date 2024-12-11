@@ -1,5 +1,6 @@
-package com.example.appcapook.model
+package com.example.appcapook.data
 
+import com.example.appcapook.model.api.SearchResult
 import com.google.gson.Gson
 import okhttp3.OkHttpClient
 import okhttp3.Request

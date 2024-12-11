@@ -40,6 +40,7 @@ dependencies {
     implementation (libs.picasso.v271828)
     implementation (libs.glide)
     implementation(libs.firebase.database.ktx)
+    implementation(libs.firebase.firestore.ktx)
     annotationProcessor (libs.compiler)
     testImplementation (libs.jetbrains.kotlinx.coroutines.test)
     implementation(libs.kotlinx.coroutines.core)

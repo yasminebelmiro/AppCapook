@@ -16,6 +16,7 @@ constraintlayout = "2.2.0"
 picasso = "2.71828"
 retrofit = "2.9.0"
 firebaseDatabaseKtx = "21.0.0"
+firebaseFirestoreKtx = "25.1.1"
 
 
 [libraries]
@@ -38,6 +39,7 @@ androidx-constraintlayout = { group = "androidx.constraintlayout", name = "const
 picasso-v271828 = { module = "com.squareup.picasso:picasso", version.ref = "picasso" }
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
 firebase-database-ktx = { group = "com.google.firebase", name = "firebase-database-ktx", version.ref = "firebaseDatabaseKtx" }
+firebase-firestore-ktx = { group = "com.google.firebase", name = "firebase-firestore-ktx", version.ref = "firebaseFirestoreKtx" }
 
 
 [plugins]

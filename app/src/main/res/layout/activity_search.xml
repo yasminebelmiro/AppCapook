@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:layout_margin="30dp"
     android:backgroundTint="@color/white"
-    tools:context=".SearchActivity">
+    tools:context=".ui.views.SearchActivity">
 
 
     <ImageView

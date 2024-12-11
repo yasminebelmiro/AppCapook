@@ -1,4 +1,4 @@
-package com.example.appcapook
+package com.example.appcapook.ui.views
 
 import android.os.Bundle
 import android.widget.ImageView
@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.appcapook.R
 import com.squareup.picasso.Picasso
 
 class BookDatailsActivity : AppCompatActivity() {
@@ -37,7 +38,6 @@ class BookDatailsActivity : AppCompatActivity() {
         autorText.text = autor
         statusText.text = status
         sinopseText.text = sinopse
-
 
         // Carregar a imagem do livro
         if (!imageUrl.isNullOrEmpty()) {

@@ -1,11 +1,12 @@
-package com.example.appcapook
+package com.example.appcapook.ui.adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.appcapook.Book
+import com.example.appcapook.R
 
 class MetasAdapter(private val books: List<Book>) : RecyclerView.Adapter<MetasAdapter.BookViewHolder>() {
 

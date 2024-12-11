@@ -12,4 +12,6 @@
     <string name="suas_leituras_atuais">Suas leituras atuais:</string>
     <string name="title_activity_main2">MainActivity2</string>
     <string name="login_com_o_google">Login com o Google</string>
+    <string name="status">Status</string>
+    <string name="adicionar_estante">Adicionar à estante</string>
 </resources>

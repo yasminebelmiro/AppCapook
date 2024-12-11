@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BookDatailsActivity">
+    tools:context=".ui.views.BookDatailsActivity">
 
 
     <ScrollView
@@ -15,7 +15,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <LinearLayout
@@ -48,7 +48,7 @@
                     android:layout_height="wrap_content"
                     android:text="Titulo"
                     android:textColor="#000000"
-                    android:textSize="30dp" />
+                    android:textSize="23dp" />
 
                 <TextView
                     android:id="@+id/textAutor"
@@ -56,25 +56,36 @@
                     android:layout_height="wrap_content"
                     android:text="@string/autor"
                     android:textColor="#000000"
-                    android:textSize="12dp"
+                    android:textSize="15dp"
                     tools:ignore="TextSizeCheck" />
 
                 <TextView
                     android:id="@+id/textStatus"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Status"
+                    android:text="@string/status"
                     android:textColor="#000000"
-                    android:textSize="18dp" />
+                    android:textSize="15sp"
+                    android:layout_marginTop="20dp"/>
 
 
             </LinearLayout>
+
+
+            <Button
+                android:id="@+id/addToBookshelfButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/green"
+                android:textColor="@color/darkGray"
+                android:text="@string/adicionar_estante" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                android:background="#F9F9C5"
+                android:background="@color/lightGray"
                 android:padding="20dp"
                 android:layout_margin="20dp">
 
@@ -84,10 +95,11 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="@string/lorem_ipsum_dolor_sit_amet_consectetur_adipiscing"
-                    android:textColor="#000000"
-                    android:textSize="15dp"
-                    tools:ignore="TextSizeCheck" />
+                    android:textColor="@color/darkGray"
+                    android:textSize="15sp"
+                    tools:ignore="TextSizeCheck"/>
             </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
