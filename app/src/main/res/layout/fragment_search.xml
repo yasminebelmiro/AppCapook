@@ -26,7 +26,7 @@
             app:srcCompat="@drawable/logo" />
 
         <EditText
-            android:id="@+id/InputBuscarLivro"
+            android:id="@+id/searchBookInput"
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:inputType=""

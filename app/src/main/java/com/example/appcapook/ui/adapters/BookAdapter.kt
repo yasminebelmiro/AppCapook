@@ -11,11 +11,19 @@ import com.example.appcapook.R
 import com.example.appcapook.model.api.Volume
 import com.squareup.picasso.Picasso
 
-class BookAdapter( val items: List<Volume>) :
-    RecyclerView.Adapter<BookAdapter.BookViewHolder>() {
+class BookAdapter(
+    private var items: List<Volume>
+) : RecyclerView.Adapter<BookAdapter.BookViewHolder>() {
 
+    // ViewHolder interno para associar as views
     inner class BookViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imageView: ImageView = itemView.findViewById(R.id.imageView)
+    }
+
+    // Método para atualizar os dados do adaptador
+    fun updateBooks(newItems: List<Volume>) {
+        items = newItems
+        notifyDataSetChanged() // Atualiza a lista no RecyclerView
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BookViewHolder {
@@ -23,33 +31,32 @@ class BookAdapter( val items: List<Volume>) :
             .inflate(R.layout.item_layout, parent, false)
         return BookViewHolder(view)
     }
+
     override fun getItemCount(): Int = items.size
 
     override fun onBindViewHolder(holder: BookViewHolder, position: Int) {
         val volume = items[position]
-        if (volume.volumeInfo.imageLinks?.smallThumbnail != null) {
-            Picasso.get().load(volume.volumeInfo.imageLinks.smallThumbnail).into(holder.imageView)
+
+        // Carregar a imagem com Picasso ou usar uma imagem padrão
+        val imageUrl = volume.volumeInfo.imageLinks?.thumbnail
+        if (imageUrl != null) {
+            Picasso.get().load(imageUrl).into(holder.imageView)
         } else {
             holder.imageView.setImageResource(R.drawable.baseline_image_24)
         }
 
+        // Configurar o clique no item para abrir a tela de detalhes do livro
         holder.itemView.setOnClickListener {
             val context = holder.itemView.context
             val intent = Intent(context, BookDatailsActivity::class.java)
 
-
             intent.putExtra("titulo", volume.volumeInfo.title)
-            intent.putExtra(
-                "autor",
-                volume.volumeInfo.authors?.joinToString(", ") ?: "Autor desconhecido"
-            )
+            intent.putExtra("autor", volume.volumeInfo.authors?.joinToString(", ") ?: "Autor desconhecido")
             intent.putExtra("sinopse", volume.volumeInfo.description ?: "Sem descrição disponível")
-            intent.putExtra("imageUrl", volume.volumeInfo.imageLinks?.smallThumbnail)
-            intent.putExtra("status", "Não lido") //Aqui vamos integrar com o banco de dados e a estante
+            intent.putExtra("imageUrl", imageUrl)
+            intent.putExtra("status", "Não lido") // Este valor pode ser atualizado no futuro
 
             context.startActivity(intent)
         }
-
     }
-    }
-
+}

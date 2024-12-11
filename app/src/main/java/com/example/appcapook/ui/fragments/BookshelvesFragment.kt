@@ -24,7 +24,7 @@ class BookshelvesFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_bookshelves, container, false)
 
         // Obter a lista de livros
-        val books =Book.getBooks()
+        val books = Book.getBooks()
 
         // Configurar os RecyclerViews
         setupRecyclerViews(view, books)

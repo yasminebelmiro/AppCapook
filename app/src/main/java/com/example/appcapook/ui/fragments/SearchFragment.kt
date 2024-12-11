@@ -28,16 +28,16 @@ class SearchFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_search, container, false)
 
         // Referência para o EditText de busca
-        val inputBuscarLivro: EditText = view.findViewById(R.id.InputBuscarLivro)
+        val searchBookInput: EditText = view.findViewById(R.id.searchBookInput)
 
         // Referência para o RecyclerView
         val recyclerView = view.findViewById<RecyclerView>(R.id.recycleViewBooks)
         recyclerView.layoutManager = GridLayoutManager(requireContext(), 3)
 
         // Configuração para buscar livros quando o usuário pressionar Enter (ação de pesquisa)
-        inputBuscarLivro.setOnEditorActionListener { _, actionId, _ ->
+        searchBookInput.setOnEditorActionListener { _, actionId, _ ->
             if (actionId == EditorInfo.IME_ACTION_SEARCH) {
-                val query = inputBuscarLivro.text.toString()
+                val query = searchBookInput.text.toString()
 
                 if (query.isNotEmpty()) {
                     // Iniciar a busca pelos livros

@@ -1,6 +1,7 @@
 package com.example.appcapook.ui.views
 
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -26,6 +27,8 @@ class BookDatailsActivity : AppCompatActivity() {
         val statusText: TextView = findViewById(R.id.textStatus)
         val sinopseText: TextView = findViewById(R.id.textSinopse)
 
+        val addButton: Button = findViewById(R.id.addToBookshelfButton)
+
         // Receber os dados enviados via Intent
         val titulo = intent.getStringExtra("titulo")
         val autor = intent.getStringExtra("autor")
@@ -45,5 +48,8 @@ class BookDatailsActivity : AppCompatActivity() {
         } else {
             imageView.setImageResource(R.drawable.baseline_image_24)
         }
+
+
     }
+
 }
