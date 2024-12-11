@@ -34,6 +34,9 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+    viewBinding {
+        enable = true
+    }
 }
 
 dependencies {
@@ -41,6 +44,11 @@ dependencies {
     implementation (libs.glide)
     implementation(libs.firebase.database.ktx)
     implementation(libs.firebase.firestore.ktx)
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.fragment.ktx)
     annotationProcessor (libs.compiler)
     testImplementation (libs.jetbrains.kotlinx.coroutines.test)
     implementation(libs.kotlinx.coroutines.core)

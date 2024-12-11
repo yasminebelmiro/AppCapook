@@ -14,4 +14,14 @@
     <string name="login_com_o_google">Login com o Google</string>
     <string name="status">Status</string>
     <string name="adicionar_estante">Adicionar à estante</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="menuhome">menuHome</string>
+    <string name="menusearch">menuSearch</string>
+    <string name="menubookshelves">menuBookshelves\n</string>
+    <string name="menu_bottom_bar_home">Início</string>
+    <string name="menu_bottom_bar_search">Buscar</string>
+    <string name="menu_bottom_bar_bookshelves">Estantes</string>
+    <string name="menu_bottom_bar_profile">Perfil</string>
+    <string name="search">Search</string>
 </resources>
