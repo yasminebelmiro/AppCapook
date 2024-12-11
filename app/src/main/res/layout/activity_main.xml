@@ -1,11 +1,10 @@
-
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ui.views.MainActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -29,7 +28,8 @@
                     android:layout_width="102dp"
                     android:layout_height="87dp"
                     android:importantForAccessibility="no"
-                    app:srcCompat="@drawable/baseline_image_24" />
+                    app:srcCompat="@drawable/mascote1"
+                    />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -54,26 +54,29 @@
                 android:id="@+id/textViewLeiturasAtuais"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="30dp"
+                android:layout_margin="20dp"
                 android:text="@string/suas_leituras_atuais" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycleReading"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp" />
+
+                />
 
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="30dp"
+                android:layout_margin="20dp"
                 android:text="Meta de leitura" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycleMetas"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:background="#F9F9C5"
+                />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

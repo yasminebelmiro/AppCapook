@@ -11,4 +11,9 @@
     <string name="autor">Autor</string>
     <string name="suas_leituras_atuais">Suas leituras atuais:</string>
     <string name="title_activity_main2">MainActivity2</string>
+    <string name="default_web_client_id">AIzaSyDYm7CFbeDV-Rp8kiqWfIqUTU_JeHTkWIU.apps.googleusercontent.com</string>
+    <string name="login_com_o_google">Login com o Google</string>
+    <string name="status">Status</string>
+    <string name="adicionar_estante">Adicionar à estante</string>
+
 </resources>

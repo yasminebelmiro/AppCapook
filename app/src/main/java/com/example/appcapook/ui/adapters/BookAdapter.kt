@@ -1,11 +1,12 @@
-package com.example.appcapook
+package com.example.appcapook.ui.adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.appcapook.model.Volume
+import com.example.appcapook.R
+import com.example.appcapook.model.api.Volume
 import com.squareup.picasso.Picasso
 
 class BookAdapter( val items: List<Volume>) :

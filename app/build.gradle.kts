@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("com.google.gms.google-services")
+
 }
 
 android {
@@ -36,8 +38,14 @@ android {
 }
 
 dependencies {
+
+    implementation (libs.com.google.firebase.firebase.auth)
+    implementation (libs.play.services.auth)
+    implementation(platform(libs.firebase.bom))
     implementation (libs.picasso.v271828)
     implementation (libs.glide)
+    implementation(libs.play.services.base)
+    implementation(libs.firebase.firestore.ktx)
     annotationProcessor (libs.compiler)
     testImplementation (libs.jetbrains.kotlinx.coroutines.test)
     implementation(libs.kotlinx.coroutines.core)

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "846683877240",
+    "project_id": "appcapook",
+    "storage_bucket": "appcapook.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:846683877240:android:c2a3b0a787dd4e121b228d",
+        "android_client_info": {
+          "package_name": "com.example.appcapook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "846683877240-qpmgd2ih458mgioiu2m42ktcdekeg1j1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.appcapook",
+            "certificate_hash": "8fe0e02e279ab4f7cb9779f8066778fbddd326eb"
+          }
+        },
+        {
+          "client_id": "846683877240-1scgn6rpi0r3nbi32pjnaukn4ls3sn93.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYm7CFbeDV-Rp8kiqWfIqUTU_JeHTkWIU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "846683877240-1scgn6rpi0r3nbi32pjnaukn4ls3sn93.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

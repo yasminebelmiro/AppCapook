@@ -1,13 +1,14 @@
-package com.example.appcapook
+package com.example.appcapook.ui.adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.appcapook.Book
+import com.example.appcapook.R
 
-class BookReadingAdapter (private val books: List<Book>) : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
-
+class BookReadingAdapter(private val books: List<Book>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private val TYPE_HEADER = 0
     private val TYPE_ITEM = 1
@@ -35,6 +36,12 @@ class BookReadingAdapter (private val books: List<Book>) : RecyclerView.Adapter<
             holder.titleTextView.text = book.title
             holder.pageCountTextView.text = "Páginas: ${book.pageCount}"
             holder.progressTextView.text = "Progresso: ${book.readingProgress}%"
+
+            // Adicionar descrições de acessibilidade
+            holder.imageView.contentDescription = "Capa do livro: ${book.title}"
+            holder.titleTextView.contentDescription = "Título do livro: ${book.title}"
+            holder.pageCountTextView.contentDescription = "Número de páginas: ${book.pageCount}"
+            holder.progressTextView.contentDescription = "Progresso de leitura: ${book.readingProgress}%"
         }
     }
 

@@ -1,22 +1,24 @@
-package com.example.appcapook
+@file:Suppress("DEPRECATION")
+
+package com.example.appcapook.ui.views
+
 
 import android.os.Bundle
-import android.view.inputmethod.EditorInfo
-import android.widget.EditText
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.appcapook.model.BookHttp
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
+import com.example.appcapook.Book
+import com.example.appcapook.R
+import com.example.appcapook.ui.adapters.BookReadingAdapter
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var firebaseAuth: FirebaseAuth
+    private lateinit var googleSignInClient: GoogleSignInClient
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +29,7 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+
         val books = Book.getBooks()
         val recycleViewReading = findViewById<RecyclerView>(R.id.recycleReading)
         val recyclerViewMetas = findViewById<RecyclerView>(R.id.recycleMetas)
@@ -35,5 +38,6 @@ class MainActivity : AppCompatActivity() {
         recyclerViewMetas.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         recyclerViewMetas.adapter = BookReadingAdapter(books)
 
+        }
     }
-}
+

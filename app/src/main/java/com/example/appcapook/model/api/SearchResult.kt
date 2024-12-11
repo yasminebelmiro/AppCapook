@@ -1,4 +1,4 @@
-package com.example.appcapook.model
+package com.example.appcapook.model.api
 
 data class SearchResult(
     val items:List<Volume>,
