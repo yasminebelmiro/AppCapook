@@ -22,10 +22,10 @@
             android:name=".ui.views.BookDatailsActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.views.LoginActivity"
+            android:name=".ui.views.NavBottomActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.views.NavBottomActivity"
+            android:name=".ui.views.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

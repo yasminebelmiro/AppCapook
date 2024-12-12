@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package com.example.appcapook.ui.views
 
 import android.content.Intent
