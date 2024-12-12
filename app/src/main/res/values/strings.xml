@@ -1,3 +1,35 @@
 <resources>
     <string name="app_name">AppCapook</string>
+    <string name="t_tulo_autor_editora">Título, autor, editora...</string>
+    <string name="recycler_view_books_description">Lista de livros</string>
+    <string name="capa_do_livro">Capa do livro</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="lorem_ipsum_dolor_sit_amet_consectetur_adipiscing">“Lorem ipsum dolor sit amet, consectetur adipiscing.”</string>
+    <string name="autor">Autor</string>
+    <string name="suas_leituras_atuais">Suas leituras atuais:</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="login_com_o_google">Login com o Google</string>
+    <string name="status">Status</string>
+    <string name="adicionar_estante">Adicionar à estante</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="menuhome">menuHome</string>
+    <string name="menusearch">menuSearch</string>
+    <string name="menubookshelves">menuBookshelves\n</string>
+    <string name="menu_bottom_bar_home">Início</string>
+    <string name="menu_bottom_bar_search">Buscar</string>
+    <string name="menu_bottom_bar_bookshelves">Estantes</string>
+    <string name="menu_bottom_bar_profile">Perfil</string>
+    <string name="search">Search</string>
+    <string name="nova_estante">Nova estante</string>
+    <string name="quero_ler">Quero ler</string>
+    <string name="minhas_estantes">Minhas estantes</string>
+    <string name="_0_livros">0 livros</string>
+    <string name="mais">+</string>
+    <string name="_50">50%</string>
+    <string name="logoff">Logoff</string>
+    <string name="default_web_client_id">AIzaSyAKPyq2Sny_regk1q5KZSaSmRwBYSYiA0o.apps.googleusercontent.com</string>
 </resources>
