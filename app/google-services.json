@@ -12,7 +12,12 @@
           "package_name": "com.example.appcapook"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "205926975822-54jni6bbbskn3lhaaol54v8bj63nvu7c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyAKPyq2Sny_regk1q5KZSaSmRwBYSYiA0o"
@@ -20,7 +25,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "205926975822-54jni6bbbskn3lhaaol54v8bj63nvu7c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
